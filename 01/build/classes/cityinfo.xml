@@ -9,7 +9,8 @@
 			<result>/view/IndexTemp.jsp</result>
 		</action>
 		<!-- 前台信息处理 -->
-		<action name="info_*" class="com.skybow.action.InfoAction" method="{1}">
+		<action name="info_*" class="com.skybow.action.InfoAction"
+			method="{1}">
 			<result>/view/IndexTemp.jsp</result>
 			<result name="input">/view/IndexTemp.jsp</result>
 		</action>

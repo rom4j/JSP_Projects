@@ -1,4 +1,4 @@
-package com.yxq.actionSuper;
+package com.skybow.actionSuper;
 
 import java.util.Map;
 
@@ -11,18 +11,29 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class MySuperAction extends ActionSupport implements SessionAware,ServletRequestAware,ServletResponseAware {
+/**
+ * Action基类
+ * @author le
+ * 2015年6月18日 下午12:35:53
+ * 用途:
+ * 	方便处理session,request,response
+ * 
+ */
+public class MySuperAction extends ActionSupport implements SessionAware,
+		ServletRequestAware, ServletResponseAware {
 	protected HttpServletRequest request;
 	protected HttpServletResponse response;
 	protected Map session;
 
 	public void setSession(Map session) {
-		this.session=session;	
+		this.session = session;
 	}
+
 	public void setServletRequest(HttpServletRequest request) {
-		this.request=request;		
+		this.request = request;
 	}
+
 	public void setServletResponse(HttpServletResponse response) {
-		this.response=response;
+		this.response = response;
 	}
 }

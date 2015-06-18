@@ -1,5 +1,11 @@
-package com.yxq.model;
+package com.skybow.model;
 
+/**
+ * 搜索信息Model
+ * @author le
+ * 2015年6月18日 下午12:31:58
+ * 
+ */
 public class SearchInfo {
 	private String subsql;
 	private String sqlvalue;

@@ -1,16 +1,22 @@
-package com.yxq.model;
+package com.skybow.model;
 
+/**
+ * 供求信息Model
+ * @author le
+ * 2015年6月18日 下午12:32:33
+ * 
+ */
 public class InfoSingle {
-	private int id;
-	private int infoType;
-	private String infoTitle;
-	private String infoContent;
-	private String infoLinkman;
-	private String infoPhone;
-	private String infoEmail;
-	private String infoDate; 
-	private String infoState;
-	private String infoPayfor;
+	private int id;//ID
+	private int infoType;//信息分类
+	private String infoTitle;//信息标题
+	private String infoContent;//信息内容
+	private String infoLinkman;//联系人
+	private String infoPhone;//联系电话
+	private String infoEmail;//联系邮箱
+	private String infoDate; //发布时间
+	private String infoState;//发布状态
+	private String infoPayfor;//是否付费
 	
 	public int getId() {
 		return this.id;
@@ -72,6 +78,11 @@ public class InfoSingle {
 	public void setInfoType(int infoType) {
 		this.infoType = infoType;
 	}
+	/**
+	 * TODO 这个方法不知道是什么意思
+	 * @param len
+	 * @return
+	 */
 	public String getSubInfoTitle(int len){
 		if(len<=0||len>this.infoTitle.length())
 			len=this.infoTitle.length();

@@ -1,4 +1,4 @@
-package com.yxq.dao;
+package com.skybow.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -81,12 +81,13 @@ public class DB {
 			getCon();
 			if(con!=null){
 				try{		
-					System.out.println("---->sql--"+sql);
+					System.out.print("---->sql--"+sql);
 					pstm=con.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 					for(int i=0;i<params.length;i++){
-						System.out.println("---->"+i+"--"+params[i]);
+						System.out.print("--"+params[i]+",");
 						pstm.setObject(i+1,params[i]);
 					}
+					System.out.println();
 					pstm.execute();
 				}catch(SQLException e){
 					System.out.println("doPstm()·½·¨³ö´í£¡");

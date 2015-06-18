@@ -1,4 +1,4 @@
-package com.yxq.dao;
+package com.skybow.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-import com.yxq.model.CreatePage;
-import com.yxq.model.InfoSingle;
-import com.yxq.tools.DoString;
+import com.skybow.model.CreatePage;
+import com.skybow.model.InfoSingle;
+import com.skybow.tools.DoString;
 
 /**
  * 数据库业务相关操作

@@ -9,17 +9,18 @@ public class ConnDB {
 	  public Statement stmt = null;
 	  public ResultSet rs = null;
 	  private static String propFileName = "/com/connDB.properties";	//指定资源文件保存的位置
-	  private static Properties prop = new Properties();
+	  //private static Properties prop = new Properties();
 	  private static String dbClassName ="com.mysql.jdbc.Driver";
 	  private static String dbUrl =
 	      "jdbc:mysql://127.0.0.1:3306/db_librarySys?user=root&password=111&useUnicode=true";
 	  public ConnDB(){
 	    try {
-	      InputStream in=getClass().getResourceAsStream(propFileName);
-	      prop.load(in);									//通过输入流对象加载Properties文件
-	      dbClassName = prop.getProperty("DB_CLASS_NAME");	//获取数据库驱动
-	      dbUrl = prop.getProperty("DB_URL",
-	                               "jdbc:mysql://127.0.0.1:3306/db_librarySys?user=root&password=3171204&useUnicode=true");
+			// InputStream in=getClass().getResourceAsStream(propFileName);
+			// prop.load(in);									//通过输入流对象加载Properties文件
+	      //dbClassName = prop.getProperty("DB_CLASS_NAME");	//获取数据库驱动
+	      dbClassName = "com.mysql.jdbc.Driver";
+	      //dbUrl = prop.getProperty("DB_URL","jdbc:mysql://127.0.0.1:3306/db_librarySys?user=root&password=3171204&useUnicode=true");
+	      dbUrl = "jdbc:mysql://127.0.0.1:3306/db_librarySys?user=root&password=3171204&useUnicode=true";
 	    }
 	    catch (Exception e) {
 	      e.printStackTrace();		//输出异常信息
@@ -30,6 +31,7 @@ public class ConnDB {
 	    Connection conn = null;
 	    try {
 	      Class.forName(dbClassName).newInstance();
+	      System.out.println("---->dbUrl="+dbUrl);
 	      conn = DriverManager.getConnection(dbUrl);
 	    }
 	    catch (Exception ee) {

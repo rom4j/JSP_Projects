@@ -19,7 +19,7 @@ public class ConnDB {
 	      prop.load(in);									//通过输入流对象加载Properties文件
 	      dbClassName = prop.getProperty("DB_CLASS_NAME");	//获取数据库驱动
 	      dbUrl = prop.getProperty("DB_URL",
-	                               "jdbc:mysql://127.0.0.1:3306/db_librarySys?user=root&password=111&useUnicode=true");
+	                               "jdbc:mysql://127.0.0.1:3306/db_librarySys?user=root&password=3171204&useUnicode=true");
 	    }
 	    catch (Exception e) {
 	      e.printStackTrace();		//输出异常信息
